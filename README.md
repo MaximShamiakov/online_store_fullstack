@@ -40,6 +40,8 @@ online_store/
 
 git@github.com:MaximShamiakov/online_store-fullstac.git
 cd online_store-fullstack
+git submodule init
+git submodule update
 
 # 2. Start services
 docker-compose up --build
