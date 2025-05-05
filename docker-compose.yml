@@ -1,0 +1,20 @@
+version: '3.8'
+
+
+services:
+  frontend:
+    build: ./online-store
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./online-store:/app
+      - /app/node_modules
+
+  backend:
+    build: ./online_store_django_2.0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./online_store_django_2.0:/app
+    environment:
+      - DEBUG=1
